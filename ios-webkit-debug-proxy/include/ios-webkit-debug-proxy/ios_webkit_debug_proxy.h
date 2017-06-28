@@ -67,8 +67,8 @@ struct iwdp_struct {
   // @param to_device_id optional selected device UUID
   // @param to_device_name optional selected device name
   // @result fd, or -1 for error
-  int(*attach)(iwdp_t iwdp, const char *device_id, char **to_device_id,
-	  char **to_device_name, char *& product_model, char*& ios_version, char*& szMacAddr, char*& szSerialNo);
+  int(*attach)(iwdp_t iwdp, const char * device_id, char ** to_device_id,
+	  char ** to_device_name, char ** product_model, char ** ios_version, char ** szMacAddr, char ** szSerialNo);
 
   // Select the port-scan range for the browser listener.
   // @param to_port preferred port, e.g. 9227.  If a device is re-attached

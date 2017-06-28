@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5229874A1F034C630008BCED /* libTACommunication.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 529892811DF7AE3F00BF8044 /* libTACommunication.dylib */; };
+		5229874C1F034CF40008BCED /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5229874B1F034CF40008BCED /* libssl.a */; };
+		5229874E1F034DB30008BCED /* libusbmuxd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5229874D1F034DB30008BCED /* libusbmuxd.a */; };
+		522987501F034DDB0008BCED /* libplist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5229874F1F034DDB0008BCED /* libplist.a */; };
+		522987521F034DF60008BCED /* libimobiledevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 522987511F034DF60008BCED /* libimobiledevice.a */; };
+		52338DE11F00EF5000B7C550 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DCB1F00EF5000B7C550 /* base64.c */; };
+		52338DE21F00EF5000B7C550 /* base64.h in Sources */ = {isa = PBXBuildFile; fileRef = 52338DCC1F00EF5000B7C550 /* base64.h */; };
+		52338DE31F00EF5000B7C550 /* char_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DCD1F00EF5000B7C550 /* char_buffer.c */; };
+		52338DE41F00EF5000B7C550 /* char_buffer.h in Sources */ = {isa = PBXBuildFile; fileRef = 52338DCE1F00EF5000B7C550 /* char_buffer.h */; };
+		52338DE51F00EF5000B7C550 /* device_listener.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DCF1F00EF5000B7C550 /* device_listener.c */; };
+		52338DE61F00EF5000B7C550 /* DeviceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD01F00EF5000B7C550 /* DeviceInfo.cpp */; };
+		52338DE71F00EF5000B7C550 /* DeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD11F00EF5000B7C550 /* DeviceManager.cpp */; };
+		52338DE81F00EF5000B7C550 /* hash_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD21F00EF5000B7C550 /* hash_table.c */; };
+		52338DE91F00EF5000B7C550 /* hash_table.h in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD31F00EF5000B7C550 /* hash_table.h */; };
+		52338DEA1F00EF5000B7C550 /* ios_webkit_debug_proxy_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD41F00EF5000B7C550 /* ios_webkit_debug_proxy_main.c */; };
+		52338DEB1F00EF5000B7C550 /* ios_webkit_debug_proxy.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD51F00EF5000B7C550 /* ios_webkit_debug_proxy.c */; };
+		52338DEC1F00EF5000B7C550 /* port_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD61F00EF5000B7C550 /* port_config.c */; };
+		52338DED1F00EF5000B7C550 /* port_config.h in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD71F00EF5000B7C550 /* port_config.h */; };
+		52338DEE1F00EF5000B7C550 /* RegisterClientWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD81F00EF5000B7C550 /* RegisterClientWrapper.cpp */; };
+		52338DEF1F00EF5000B7C550 /* rpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DD91F00EF5000B7C550 /* rpc.c */; };
+		52338DF01F00EF5000B7C550 /* rpc.h in Sources */ = {isa = PBXBuildFile; fileRef = 52338DDA1F00EF5000B7C550 /* rpc.h */; };
+		52338DF11F00EF5000B7C550 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DDB1F00EF5000B7C550 /* sha1.c */; };
+		52338DF21F00EF5000B7C550 /* sha1.h in Sources */ = {isa = PBXBuildFile; fileRef = 52338DDC1F00EF5000B7C550 /* sha1.h */; };
+		52338DF31F00EF5000B7C550 /* socket_manager.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DDD1F00EF5000B7C550 /* socket_manager.c */; };
+		52338DF41F00EF5000B7C550 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52338DDE1F00EF5000B7C550 /* Utility.cpp */; };
+		52338DF51F00EF5000B7C550 /* webinspector.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DDF1F00EF5000B7C550 /* webinspector.c */; };
+		52338DF61F00EF5000B7C550 /* websocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 52338DE01F00EF5000B7C550 /* websocket.c */; };
+		524DB66B1F010058006AC517 /* libcommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 524DB6681F010058006AC517 /* libcommon.dylib */; };
+		524DB66D1F010058006AC517 /* libTALogger.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 524DB66A1F010058006AC517 /* libTALogger.dylib */; };
+		52A4C7531BE86F7C00CB4262 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A4C7501BE86F7C00CB4262 /* libcrypto.a */; };
+		52A4C7551BE86F7C00CB4262 /* libxml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A4C7521BE86F7C00CB4262 /* libxml2.a */; };
+		52A4C7571BE870CB00CB4262 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A4C7561BE870CB00CB4262 /* libiconv.dylib */; };
+		52A4C7591BE870D300CB4262 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A4C7581BE870D300CB4262 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5233345319987F88003B5D1E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5229874B1F034CF40008BCED /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../bin/MAC_Debug/libimobiledevice/libssl.a; sourceTree = "<group>"; };
+		5229874D1F034DB30008BCED /* libusbmuxd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libusbmuxd.a; path = ../../../bin/MAC_Debug/libimobiledevice/libusbmuxd.a; sourceTree = "<group>"; };
+		5229874F1F034DDB0008BCED /* libplist.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libplist.a; path = ../../../bin/MAC_Debug/libimobiledevice/libplist.a; sourceTree = "<group>"; };
+		522987511F034DF60008BCED /* libimobiledevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimobiledevice.a; path = ../../../bin/MAC_Debug/libimobiledevice/libimobiledevice.a; sourceTree = "<group>"; };
+		5233345519987F88003B5D1E /* TAWebkitProxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TAWebkitProxy; sourceTree = BUILT_PRODUCTS_DIR; };
+		52338D9D1F00EAAD00B7C550 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		52338DCB1F00EF5000B7C550 /* base64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = base64.c; path = src/base64.c; sourceTree = "<group>"; };
+		52338DCC1F00EF5000B7C550 /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = base64.h; path = src/base64.h; sourceTree = "<group>"; };
+		52338DCD1F00EF5000B7C550 /* char_buffer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = char_buffer.c; path = src/char_buffer.c; sourceTree = "<group>"; };
+		52338DCE1F00EF5000B7C550 /* char_buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = char_buffer.h; path = src/char_buffer.h; sourceTree = "<group>"; };
+		52338DCF1F00EF5000B7C550 /* device_listener.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = device_listener.c; path = src/device_listener.c; sourceTree = "<group>"; };
+		52338DD01F00EF5000B7C550 /* DeviceInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DeviceInfo.cpp; path = src/DeviceInfo.cpp; sourceTree = "<group>"; };
+		52338DD11F00EF5000B7C550 /* DeviceManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DeviceManager.cpp; path = src/DeviceManager.cpp; sourceTree = "<group>"; };
+		52338DD21F00EF5000B7C550 /* hash_table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = hash_table.c; path = src/hash_table.c; sourceTree = "<group>"; };
+		52338DD31F00EF5000B7C550 /* hash_table.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = hash_table.h; path = src/hash_table.h; sourceTree = "<group>"; };
+		52338DD41F00EF5000B7C550 /* ios_webkit_debug_proxy_main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ios_webkit_debug_proxy_main.c; path = src/ios_webkit_debug_proxy_main.c; sourceTree = "<group>"; };
+		52338DD51F00EF5000B7C550 /* ios_webkit_debug_proxy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ios_webkit_debug_proxy.c; path = src/ios_webkit_debug_proxy.c; sourceTree = "<group>"; };
+		52338DD61F00EF5000B7C550 /* port_config.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = port_config.c; path = src/port_config.c; sourceTree = "<group>"; };
+		52338DD71F00EF5000B7C550 /* port_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = port_config.h; path = src/port_config.h; sourceTree = "<group>"; };
+		52338DD81F00EF5000B7C550 /* RegisterClientWrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RegisterClientWrapper.cpp; path = src/RegisterClientWrapper.cpp; sourceTree = "<group>"; };
+		52338DD91F00EF5000B7C550 /* rpc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = rpc.c; path = src/rpc.c; sourceTree = "<group>"; };
+		52338DDA1F00EF5000B7C550 /* rpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = rpc.h; path = src/rpc.h; sourceTree = "<group>"; };
+		52338DDB1F00EF5000B7C550 /* sha1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = src/sha1.c; sourceTree = "<group>"; };
+		52338DDC1F00EF5000B7C550 /* sha1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = src/sha1.h; sourceTree = "<group>"; };
+		52338DDD1F00EF5000B7C550 /* socket_manager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = socket_manager.c; path = src/socket_manager.c; sourceTree = "<group>"; };
+		52338DDE1F00EF5000B7C550 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Utility.cpp; path = src/Utility.cpp; sourceTree = "<group>"; };
+		52338DDF1F00EF5000B7C550 /* webinspector.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = webinspector.c; path = src/webinspector.c; sourceTree = "<group>"; };
+		52338DE01F00EF5000B7C550 /* websocket.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = websocket.c; path = src/websocket.c; sourceTree = "<group>"; };
+		524DB6681F010058006AC517 /* libcommon.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommon.dylib; path = ../../../bin/MAC_Debug/libcommon.dylib; sourceTree = "<group>"; };
+		524DB6691F010058006AC517 /* libTACommunication.dylib.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = libTACommunication.dylib.dSYM; path = ../../../bin/MAC_Debug/libTACommunication.dylib.dSYM; sourceTree = "<group>"; };
+		524DB66A1F010058006AC517 /* libTALogger.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libTALogger.dylib; path = ../../../bin/MAC_Debug/libTALogger.dylib; sourceTree = "<group>"; };
+		529892811DF7AE3F00BF8044 /* libTACommunication.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libTACommunication.dylib; path = ../../../bin/MAC_Debug/libTACommunication.dylib; sourceTree = "<group>"; };
+		52A4C7481BE86F4000CB4262 /* libcnary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcnary.a; path = ../../../bin/MAC_Release/libimobiledevice/libcnary.a; sourceTree = "<group>"; };
+		52A4C7491BE86F4000CB4262 /* libimobiledevice-1.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libimobiledevice-1.2.0.a"; path = "../../../bin/MAC_Release/libimobiledevice/libimobiledevice-1.2.0.a"; sourceTree = "<group>"; };
+		52A4C74A1BE86F4000CB4262 /* libplist-1.12.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libplist-1.12.a"; path = "../../../bin/MAC_Release/libimobiledevice/libplist-1.12.a"; sourceTree = "<group>"; };
+		52A4C74B1BE86F4000CB4262 /* libusbmuxd-1.0.10.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libusbmuxd-1.0.10.a"; path = "../../../bin/MAC_Release/libimobiledevice/libusbmuxd-1.0.10.a"; sourceTree = "<group>"; };
+		52A4C7501BE86F7C00CB4262 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../bin/MAC_Release/libimobiledevice/libcrypto.a; sourceTree = "<group>"; };
+		52A4C7511BE86F7C00CB4262 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../bin/MAC_Release/libimobiledevice/libssl.a; sourceTree = "<group>"; };
+		52A4C7521BE86F7C00CB4262 /* libxml2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxml2.a; path = ../../../bin/MAC_Release/libimobiledevice/libxml2.a; sourceTree = "<group>"; };
+		52A4C7561BE870CB00CB4262 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
+		52A4C7581BE870D300CB4262 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		52AA3BE619DCFFED00E17332 /* libcommon.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommon.dylib; path = ../../../bin/MAC_Release/libcommon.dylib; sourceTree = "<group>"; };
+		52AA3BE719DCFFED00E17332 /* libTACommunication.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libTACommunication.dylib; path = ../../../bin/MAC_Release/libTACommunication.dylib; sourceTree = "<group>"; };
+		52AA3BE819DCFFED00E17332 /* libTALogger.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libTALogger.dylib; path = ../../../bin/MAC_Release/libTALogger.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5233345219987F88003B5D1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5229874A1F034C630008BCED /* libTACommunication.dylib in Frameworks */,
+				524DB66B1F010058006AC517 /* libcommon.dylib in Frameworks */,
+				524DB66D1F010058006AC517 /* libTALogger.dylib in Frameworks */,
+				52A4C7591BE870D300CB4262 /* libz.dylib in Frameworks */,
+				52A4C7551BE86F7C00CB4262 /* libxml2.a in Frameworks */,
+				52A4C7571BE870CB00CB4262 /* libiconv.dylib in Frameworks */,
+				5229874C1F034CF40008BCED /* libssl.a in Frameworks */,
+				52A4C7531BE86F7C00CB4262 /* libcrypto.a in Frameworks */,
+				522987501F034DDB0008BCED /* libplist.a in Frameworks */,
+				5229874E1F034DB30008BCED /* libusbmuxd.a in Frameworks */,
+				522987521F034DF60008BCED /* libimobiledevice.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5233344C19987F88003B5D1E = {
+			isa = PBXGroup;
+			children = (
+				52338DF71F00EF6000B7C550 /* src */,
+				52338D9D1F00EAAD00B7C550 /* include */,
+				529892811DF7AE3F00BF8044 /* libTACommunication.dylib */,
+				52A4C7581BE870D300CB4262 /* libz.dylib */,
+				52A4C7561BE870CB00CB4262 /* libiconv.dylib */,
+				52A4C7501BE86F7C00CB4262 /* libcrypto.a */,
+				52A4C7511BE86F7C00CB4262 /* libssl.a */,
+				52A4C7521BE86F7C00CB4262 /* libxml2.a */,
+				52A4C7481BE86F4000CB4262 /* libcnary.a */,
+				52A4C7491BE86F4000CB4262 /* libimobiledevice-1.2.0.a */,
+				52A4C74A1BE86F4000CB4262 /* libplist-1.12.a */,
+				52A4C74B1BE86F4000CB4262 /* libusbmuxd-1.0.10.a */,
+				52AA3BE619DCFFED00E17332 /* libcommon.dylib */,
+				52AA3BE719DCFFED00E17332 /* libTACommunication.dylib */,
+				52AA3BE819DCFFED00E17332 /* libTALogger.dylib */,
+				5233345619987F88003B5D1E /* Products */,
+				524DB6671F010058006AC517 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5233345619987F88003B5D1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5233345519987F88003B5D1E /* TAWebkitProxy */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52338DF71F00EF6000B7C550 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				52338DCB1F00EF5000B7C550 /* base64.c */,
+				52338DCC1F00EF5000B7C550 /* base64.h */,
+				52338DCD1F00EF5000B7C550 /* char_buffer.c */,
+				52338DCE1F00EF5000B7C550 /* char_buffer.h */,
+				52338DCF1F00EF5000B7C550 /* device_listener.c */,
+				52338DD01F00EF5000B7C550 /* DeviceInfo.cpp */,
+				52338DD11F00EF5000B7C550 /* DeviceManager.cpp */,
+				52338DD21F00EF5000B7C550 /* hash_table.c */,
+				52338DD31F00EF5000B7C550 /* hash_table.h */,
+				52338DD41F00EF5000B7C550 /* ios_webkit_debug_proxy_main.c */,
+				52338DD51F00EF5000B7C550 /* ios_webkit_debug_proxy.c */,
+				52338DD61F00EF5000B7C550 /* port_config.c */,
+				52338DD71F00EF5000B7C550 /* port_config.h */,
+				52338DD81F00EF5000B7C550 /* RegisterClientWrapper.cpp */,
+				52338DD91F00EF5000B7C550 /* rpc.c */,
+				52338DDA1F00EF5000B7C550 /* rpc.h */,
+				52338DDB1F00EF5000B7C550 /* sha1.c */,
+				52338DDC1F00EF5000B7C550 /* sha1.h */,
+				52338DDD1F00EF5000B7C550 /* socket_manager.c */,
+				52338DDE1F00EF5000B7C550 /* Utility.cpp */,
+				52338DDF1F00EF5000B7C550 /* webinspector.c */,
+				52338DE01F00EF5000B7C550 /* websocket.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		524DB6671F010058006AC517 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				522987511F034DF60008BCED /* libimobiledevice.a */,
+				5229874F1F034DDB0008BCED /* libplist.a */,
+				5229874D1F034DB30008BCED /* libusbmuxd.a */,
+				5229874B1F034CF40008BCED /* libssl.a */,
+				524DB6681F010058006AC517 /* libcommon.dylib */,
+				524DB6691F010058006AC517 /* libTACommunication.dylib.dSYM */,
+				524DB66A1F010058006AC517 /* libTALogger.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5233345419987F88003B5D1E /* TAWebkitProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5233345E19987F88003B5D1E /* Build configuration list for PBXNativeTarget "TAWebkitProxy" */;
+			buildPhases = (
+				5233345119987F88003B5D1E /* Sources */,
+				5233345219987F88003B5D1E /* Frameworks */,
+				5233345319987F88003B5D1E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TAWebkitProxy;
+			productName = "ios-webkit-debug-proxy";
+			productReference = 5233345519987F88003B5D1E /* TAWebkitProxy */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5233344D19987F88003B5D1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = logigear;
+			};
+			buildConfigurationList = 5233345019987F88003B5D1E /* Build configuration list for PBXProject "TAWebkitProxy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5233344C19987F88003B5D1E;
+			productRefGroup = 5233345619987F88003B5D1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5233345419987F88003B5D1E /* TAWebkitProxy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5233345119987F88003B5D1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52338DE11F00EF5000B7C550 /* base64.c in Sources */,
+				52338DE21F00EF5000B7C550 /* base64.h in Sources */,
+				52338DE31F00EF5000B7C550 /* char_buffer.c in Sources */,
+				52338DE41F00EF5000B7C550 /* char_buffer.h in Sources */,
+				52338DE51F00EF5000B7C550 /* device_listener.c in Sources */,
+				52338DE61F00EF5000B7C550 /* DeviceInfo.cpp in Sources */,
+				52338DE71F00EF5000B7C550 /* DeviceManager.cpp in Sources */,
+				52338DE81F00EF5000B7C550 /* hash_table.c in Sources */,
+				52338DE91F00EF5000B7C550 /* hash_table.h in Sources */,
+				52338DEA1F00EF5000B7C550 /* ios_webkit_debug_proxy_main.c in Sources */,
+				52338DEB1F00EF5000B7C550 /* ios_webkit_debug_proxy.c in Sources */,
+				52338DEC1F00EF5000B7C550 /* port_config.c in Sources */,
+				52338DED1F00EF5000B7C550 /* port_config.h in Sources */,
+				52338DEE1F00EF5000B7C550 /* RegisterClientWrapper.cpp in Sources */,
+				52338DEF1F00EF5000B7C550 /* rpc.c in Sources */,
+				52338DF01F00EF5000B7C550 /* rpc.h in Sources */,
+				52338DF11F00EF5000B7C550 /* sha1.c in Sources */,
+				52338DF21F00EF5000B7C550 /* sha1.h in Sources */,
+				52338DF31F00EF5000B7C550 /* socket_manager.c in Sources */,
+				52338DF41F00EF5000B7C550 /* Utility.cpp in Sources */,
+				52338DF51F00EF5000B7C550 /* webinspector.c in Sources */,
+				52338DF61F00EF5000B7C550 /* websocket.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5233345C19987F88003B5D1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/MAC/dependencies/include\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5233345D19987F88003B5D1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/MAC/dependencies/include\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5233345F19987F88003B5D1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/device/iOS/tools";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					_UNIX,
+					"_MACOS=1",
+					"HAVE_REGEX_H=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../PhysicalLayer/Technologies/TACommunication/src/Include\"",
+					"\"$(SRCROOT)/../../../common/include\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/include/ios-webkit-debug-proxy\"",
+					"\"$(SRCROOT)/../include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../bin/MAC_Debug\"",
+					"\"$(SRCROOT)/../../../bin/MAC_Debug/libimobiledevice\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.12;
+			};
+			name = Debug;
+		};
+		5233346019987F88003B5D1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/device/iOS/tools";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_UNIX,
+					"_MACOS=1",
+					"HAVE_REGEX_H=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../PhysicalLayer/Technologies/TACommunication/src/Include\"",
+					"\"$(SRCROOT)/../../../common/include\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/include/ios-webkit-debug-proxy\"",
+					"\"$(SRCROOT)/../include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../bin/MAC_Release/libimobiledevice\"",
+					"\"$(SRCROOT)/../../../bin/MAC_Release\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.12;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5233345019987F88003B5D1E /* Build configuration list for PBXProject "TAWebkitProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5233345C19987F88003B5D1E /* Debug */,
+				5233345D19987F88003B5D1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5233345E19987F88003B5D1E /* Build configuration list for PBXNativeTarget "TAWebkitProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5233345F19987F88003B5D1E /* Debug */,
+				5233346019987F88003B5D1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5233344D19987F88003B5D1E /* Project object */;
+}

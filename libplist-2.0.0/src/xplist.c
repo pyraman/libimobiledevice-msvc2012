@@ -32,6 +32,7 @@
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <time.h>
 
@@ -71,7 +72,6 @@
 #define XPLIST_ARRAY_LEN 5
 #define XPLIST_DICT	"dict"
 #define XPLIST_DICT_LEN 4
-#define INT64_MAX   0x7fffffffffffffffLL
 #define MAC_EPOCH 978307200
 
 static const char XML_PLIST_PROLOG[] = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\

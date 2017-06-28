@@ -50,7 +50,7 @@
 #endif
 
 #ifndef HAVE_STRCASESTR
-static inline char* strcasestr(const char *s, const char *find)
+inline char* strcasestr(const char *s, const char *find)
 {
 	char c, sc;
 	size_t len;

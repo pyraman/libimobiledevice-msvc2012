@@ -13,7 +13,7 @@
 #include <getopt.h>
 #include <errno.h>
 #include <signal.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -119,8 +119,8 @@ int main(int argc, char** argv) {
 int iwdpm_subscribe(iwdp_t iwdp) {
   return dl_connect(-1);
 }
-int iwdpm_attach(iwdp_t iwdp, const char *device_id, char **to_device_id,
-	char **to_device_name, char *& product_model, char*& ios_version, char*& szMacAddr, char*& szSerialNo) {
+int iwdpm_attach(iwdp_t iwdp, const char * device_id, char ** to_device_id,
+	char ** to_device_name, char ** product_model, char ** ios_version, char ** szMacAddr, char ** szSerialNo) {
   return wi_connect(device_id, to_device_id, to_device_name, -1, product_model, ios_version, szMacAddr, szSerialNo);
 }
 iwdp_status iwdpm_select_port(iwdp_t iwdp, const char *device_id,
@@ -220,6 +220,13 @@ void iwdpm_free(iwdpm_t self) {
     free(self);
   }
 }
+
+#ifndef WIN32
+iwdpm_t iwdpm_new()
+{
+    return new iwdpm_struct();
+}
+#endif
 
 iwdpm_t iwdpm_new(int argc, char **argv, int *to_exit) {
   iwdpm_t self = (iwdpm_t)malloc(sizeof(struct iwdpm_struct));

@@ -1,3 +1,4 @@
+#ifndef WIN32
 #if _MSC_VER > 1000
 #pragma once
 #endif
@@ -6,3 +7,5 @@
 #define true    1
 
 #define bool int
+
+#endif

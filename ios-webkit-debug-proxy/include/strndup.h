@@ -28,7 +28,7 @@
 #include <string.h>
 
 #ifndef HAVE_STRNDUP
-static inline char* strndup(const char *s, size_t n)
+inline char* strndup(const char *s, size_t n)
 {
   char *result;
   size_t len = strlen (s);

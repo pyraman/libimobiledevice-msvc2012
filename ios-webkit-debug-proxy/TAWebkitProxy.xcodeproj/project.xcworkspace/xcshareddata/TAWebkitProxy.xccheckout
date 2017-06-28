@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>72604F64-E011-4454-AAA1-20021355892A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TAWebkitProxy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E172CC4C-B1DA-4EDF-A334-41234051868D</key>
+		<string>http://192.168.168.96/svn/logigear/Development/ANG/AutomationArchitecture_LIVE</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhysicalLayer/Technologies/TAWebkitProxy/TAWebkitProxy.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E172CC4C-B1DA-4EDF-A334-41234051868D</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>E172CC4C-B1DA-4EDF-A334-41234051868D</key>
+		<string>http://192.168.168.96/svn</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://192.168.168.96/svn/logigear/Development/ANG/AutomationArchitecture_LIVE/PhysicalLayer/Technologies/TAWebkitProxyMAC/TAWebkitProxy.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E172CC4C-B1DA-4EDF-A334-41234051868D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E172CC4C-B1DA-4EDF-A334-41234051868D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AutomationArchitecture_LIVE</string>
+		</dict>
+	</array>
+</dict>
+</plist>

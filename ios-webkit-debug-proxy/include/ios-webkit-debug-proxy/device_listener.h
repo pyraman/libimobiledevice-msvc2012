@@ -11,10 +11,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-//#include <stdbool.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
-
 
 typedef uint8_t dl_status;
 #define DL_ERROR 1

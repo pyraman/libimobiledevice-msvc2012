@@ -80,7 +80,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)\ThirdParties\libimobiledevice-1.2.0.2\$(ProjectName)\include;$(SolutionDir)\ThirdParties\libimobiledevice-1.2.0.2\$(ProjectName)\src;$(SolutionDir)\ThirdParties\libimobiledevice-1.2.0.2\$(ProjectName)\libcnary\include;$(SolutionDir)\ThirdParties\libimobiledevice-1.2.0.2\3Party\include</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
