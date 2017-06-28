@@ -10,7 +10,7 @@
 #include <getopt.h>
 #include <math.h>
 #include <signal.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -93,8 +93,8 @@ struct idevice_connection_private {
 //}
 #endif
 
-int wi_connect(const char *device_id, char **to_device_id,
-	char **to_device_name, int recv_timeout, char *& product_model, char*& ios_version, char*& szMacAddr, char*& szSerialNo) {
+int wi_connect(const char * device_id, char ** to_device_id,
+	char ** to_device_name, int recv_timeout, char ** product_model, char ** ios_version, char ** szMacAddr, char ** szSerialNo) {
   int ret = -1;
 
   idevice_t phone = NULL;
@@ -107,7 +107,8 @@ int wi_connect(const char *device_id, char **to_device_id,
   // get phone
   if (idevice_new(&phone, device_id)) {
     perror("No iPhone found, is it plugged in?");
-    goto leave_cleanup;
+    //goto leave_cleanup;
+      return -1;
   }
 
   // connect to lockdownd
@@ -125,7 +126,8 @@ int wi_connect(const char *device_id, char **to_device_id,
   // get device info
   if (lockdownd_get_value(client, NULL, NULL, &node) != LOCKDOWN_E_SUCCESS)
   {
-	  goto leave_cleanup;
+	  //goto leave_cleanup;
+      return -1;
   }
   if (to_device_id)
   {
@@ -142,16 +144,16 @@ int wi_connect(const char *device_id, char **to_device_id,
   }
 
   plist_t productTypeNode = plist_dict_get_item(node, "ProductType");
-  plist_get_string_val(productTypeNode, &product_model);
+  plist_get_string_val(productTypeNode, product_model);
 
   plist_t productVersionNode = plist_dict_get_item(node, "ProductVersion");
-  plist_get_string_val(productVersionNode, &ios_version);
+  plist_get_string_val(productVersionNode, ios_version);
 
   plist_t wifiAddressNode = plist_dict_get_item(node, "WiFiAddress");
-  plist_get_string_val(wifiAddressNode, &szMacAddr);
+  plist_get_string_val(wifiAddressNode, szMacAddr);
 
   plist_t serialNoNode = plist_dict_get_item(node, "SerialNumber");
-  plist_get_string_val(serialNoNode, &szSerialNo);
+  plist_get_string_val(serialNoNode, szSerialNo);
 
   // start webinspector, get port
   if (lockdownd_start_service(client, "com.apple.webinspector", &service) ||

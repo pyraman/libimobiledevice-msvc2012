@@ -9,7 +9,7 @@
 #include <errno.h>
 #include <signal.h>
 #include <stdarg.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -437,7 +437,7 @@ dl_status iwdp_on_attach(dl_t dl, const char *device_id, int device_num) {
     wi_fd = self->connect(self, "localhost", 27753);
   } else {
 	  wi_fd = self->attach(self, device_id, NULL,
-		  (device_name ? NULL : &device_name), product_model, ios_version, szMacAddr, szSerialNo);
+		  (device_name ? NULL : &device_name), &product_model, &ios_version, &szMacAddr, &szSerialNo);
   }
   if (wi_fd < 0) {
     self->remove_fd(self, iport->s_fd);
@@ -1169,67 +1169,70 @@ ws_status iwdp_on_frame(ws_t ws,
     bool is_fin, uint8_t opcode, bool is_masking,
     const char *payload_data, size_t payload_length,
     bool *to_keep) {
-  iwdp_iws_t iws = (iwdp_iws_t)ws->state;
-  switch (opcode) {
-    case OPCODE_TEXT:
-    case OPCODE_BINARY:
-#ifdef WIN32
-	{
-#endif
-      if (!is_fin) {
-        // wait for full data
-        *to_keep = true;
-        return WS_SUCCESS;
-      }
-      if (!is_masking) {
-        return ws->send_close(ws, CLOSE_PROTOCOL_ERROR,
-            "Clients must mask");
-      }
-      iwdp_iport_t iport = iws->iport;
-      iwdp_iwi_t iwi = iport->iwi;
-      if (!iwi) {
-        return ws->send_close(ws, CLOSE_GOING_AWAY, "inspector closed?");
-      }
-      iwdp_ipage_t ipage = iws->ipage;
-      if (!ipage) {
-        // someone stole our page?
-        iwdp_ipage_t p = (iws->page_num ? (iwdp_ipage_t)ht_get_value(
-            iwi->page_num_to_ipage, HT_KEY(iws->page_num)) : NULL);
-        char *s;
-        if (asprintf(&s, "Page %d/%d %s%s", iport->port, iws->page_num,
-            (p ? "claimed by " : "not found"),
-            (p ? (p->iws ? "local" : "remote") : "" )) < 0) {
-          return ws->on_error(ws, "asprintf failed");
+    
+    iwdp_iws_t iws = (iwdp_iws_t)ws->state;
+    if (opcode == OPCODE_BINARY)
+    {
+        if (!is_fin)
+        {
+            // wait for full data
+            *to_keep = true;
+            return WS_SUCCESS;
         }
-        ws->on_error(ws, "%s", s);
-        ws_status ret = ws->send_close(ws, CLOSE_GOING_AWAY, s);
-        free(s);
-        return ret;
-      }
-      rpc_t rpc = iwi->rpc;
-      return rpc->send_forwardSocketData(rpc,
-          iwi->connection_id,
-          ipage->app_id, ipage->page_id, ipage->sender_id,
-          payload_data, payload_length);
-#ifdef WIN32
-	}
-#endif
-    case OPCODE_CLOSE:
-      // ack close
-      return ws->send_close(ws, CLOSE_NORMAL, NULL);
-
-    case OPCODE_PING:
-      // ack ping
-      return ws->send_frame(ws,
-          true, OPCODE_PONG, false,
-          payload_data, payload_length);
-
-    case OPCODE_PONG:
-      return WS_SUCCESS;
-
-    default:
-      return WS_ERROR;
-  }
+        if (!is_masking)
+        {
+            return ws->send_close(ws, CLOSE_PROTOCOL_ERROR,
+                                  "Clients must mask");
+        }
+        iwdp_iport_t iport = iws->iport;
+        iwdp_iwi_t iwi = iport->iwi;
+        if (!iwi)
+        {
+            return ws->send_close(ws, CLOSE_GOING_AWAY, "inspector closed?");
+        }
+        iwdp_ipage_t ipage = iws->ipage;
+        if (!ipage)
+        {
+            // someone stole our page?
+            iwdp_ipage_t p = (iws->page_num ? (iwdp_ipage_t)ht_get_value(
+                                                                         iwi->page_num_to_ipage, HT_KEY(iws->page_num)) : NULL);
+            char *s;
+            if (asprintf(&s, "Page %d/%d %s%s", iport->port, iws->page_num,
+                         (p ? "claimed by " : "not found"),
+                         (p ? (p->iws ? "local" : "remote") : "" )) < 0) {
+                return ws->on_error(ws, "asprintf failed");
+            }
+            ws->on_error(ws, "%s", s);
+            ws_status ret = ws->send_close(ws, CLOSE_GOING_AWAY, s);
+            free(s);
+            return ret;
+        }
+        rpc_t rpc = iwi->rpc;
+        return rpc->send_forwardSocketData(rpc,
+                                           iwi->connection_id,
+                                           ipage->app_id, ipage->page_id, ipage->sender_id,
+                                           payload_data, payload_length);
+    }
+    else if(opcode == OPCODE_CLOSE)
+    {
+        // ack close
+        return ws->send_close(ws, CLOSE_NORMAL, NULL);
+    }
+    else if(opcode == OPCODE_PING)
+    {
+        // ack ping
+        return ws->send_frame(ws,
+                              true, OPCODE_PONG, false,
+                              payload_data, payload_length);
+    }
+    else if(opcode == OPCODE_PONG)
+    {
+        return WS_SUCCESS;
+    }
+    else
+    {
+        return WS_ERROR;
+    }
 }
 
 //

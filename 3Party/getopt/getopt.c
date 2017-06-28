@@ -41,6 +41,7 @@ static char sccsid[] = "@(#)getopt.c	8.3 (Berkeley) 4/27/95";
 #include <errno.h>
 #include <stdio.h>
 #include <string.h>
+#include "getopt.h"
 
 #define __P(x) x
 #define _DIAGASSERT(x) assert(x)

@@ -15,7 +15,7 @@ extern "C" {
 #include <plist/plist.h>
 #include <stdint.h>
 #include <stdlib.h>
-
+#include <stdbool.h>
 
 typedef uint8_t wi_status;
 #define WI_ERROR 1
@@ -37,8 +37,7 @@ typedef SSIZE_T ssize_t;
 //    zero for the system default (5000 millis), or
 //    positive for milliseconds.
 // @result fd, or -1 for error
-int wi_connect(const char *device_id, char **to_device_id,
-	char **to_device_name, int recv_timeout, char *& product_model, char*& ios_version, char*& szMacAddr, char*& szSerialNo);
+int wi_connect(const char * device_id, char ** to_device_id, char ** to_device_name, int recv_timeout, char ** product_model, char ** ios_version, char ** szMacAddr, char ** szSerialNo);
 
 struct wi_struct;
 typedef struct wi_struct *wi_t;
